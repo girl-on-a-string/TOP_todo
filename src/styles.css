@@ -1,0 +1,72 @@
+:root {
+    --bg-cl: #cffafe;
+    --interface-cl: ;
+    --border-cl: ;
+    --txt-cl: ;
+    --add-cl: ;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    margin: 0;
+}
+
+/* all */
+
+#all {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* container */
+
+#container {
+    width: 80%;
+    height: 20%;
+}
+
+/* interface */
+
+#interface {
+    border: .3125rem solid var(--border-cl);
+    border-radius: 1.25rem;
+    padding: 1.5625rem;
+    text-align: center;
+}
+
+/* header */
+
+header h1 {
+    margin: 0;
+}
+
+/* main */
+
+main #add {
+    display: flex;
+    flex-direction: column;
+    margin: 1.25rem 0rem 1.25rem 0rem;
+}
+
+main #add label {
+    margin: .625rem 0rem .625rem 0rem;
+}
+
+main #add #input {
+    width: 75%;
+}
+
+/* status */
+
+#status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
