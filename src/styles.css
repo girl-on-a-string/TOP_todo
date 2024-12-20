@@ -1,9 +1,5 @@
 :root {
-    --bg-cl: #cffafe;
-    --interface-cl: ;
-    --border-cl: ;
-    --txt-cl: ;
-    --add-cl: ;
+    --txt: ;
 }
 
 * {
@@ -13,6 +9,9 @@
 
 body {
     margin: 0;
+    background-image: url("./photo-1598025792291-44ed6654d628.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* all */
@@ -35,8 +34,6 @@ body {
 /* interface */
 
 #interface {
-    border: .3125rem solid var(--border-cl);
-    border-radius: 1.25rem;
     padding: 1.5625rem;
     text-align: center;
 }
