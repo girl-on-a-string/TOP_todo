@@ -12,23 +12,20 @@ body {
     background-image: url("./photo-1598025792291-44ed6654d628.avif");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-/* all */
-
-#all {
-    width: 100vw;
+    display: grid;
+    grid-template-rows: 97% 3%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 /* container */
 
 #container {
-    width: 80%;
-    height: 20%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* interface */
@@ -46,24 +43,8 @@ header h1 {
 
 /* main */
 
-main #add {
-    display: flex;
-    flex-direction: column;
-    margin: 1.25rem 0rem 1.25rem 0rem;
-}
+/* footer */
 
-main #add label {
-    margin: .625rem 0rem .625rem 0rem;
-}
-
-main #add #input {
-    width: 75%;
-}
-
-/* status */
-
-#status {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+footer {
+    text-align: center;
 }
