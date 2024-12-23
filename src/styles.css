@@ -14,8 +14,8 @@ body {
     background-image: url("./photo-1598025792291-44ed6654d628.avif");
     background-repeat: no-repeat;
     background-size: cover;
-    display: grid;
-    grid-template-rows: 97% 3%;
+    /* display: grid; */
+    /* grid-template-rows: 97% 3%; */
     height: 100vh;
     overflow: hidden;
 }
