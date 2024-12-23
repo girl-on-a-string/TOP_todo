@@ -1,5 +1,7 @@
 :root {
-    --txt: ;
+    --txt-defualt: black;
+    --txt-contrast: #E0B97D;
+    --pad-defualt: 1.25rem;
 }
 
 * {
@@ -42,6 +44,20 @@ header h1 {
 }
 
 /* main */
+
+main #add-task button {
+    background-color: var(--txt-defualt);
+    padding: var(--pad-defualt);
+    border-radius: var(--pad-defualt);
+    border: none;
+    color: var(--txt-contrast);
+    display: flex;
+    align-items: center;
+}
+
+main #add-task button span:nth-child(2) {
+    margin-left: .625rem;
+}
 
 /* footer */
 
