@@ -7,24 +7,28 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add" />
 </head>
 <body>
+    <div id="modal-shadow"></div>
     <div id="modal">
-        <span id="task-add-prompt">Add A Task</span>
-        <form action="" id="add-task-form">
-            <input type="text" placeholder="Task Name">
-            <input type="text" placeholder="Description">
-            <fieldset>
-                <legend>Task Priority:</legend>
-
-                <label for="low-priority">Low</label>
-                <input id="low-priority" type="radio" name="priority">
-
-                <label for="mid-priority">Mid</label>
-                <input id="mid-priority" type="radio" name="priority">
-
-                <label for="high-priority">High</label>
-                <input id="high-priority" type="radio" name="priority">
-            </fieldset>
-        </form>
+        <div id="task-add-prompt">Add A Task</div>
+        <div id="modal-content">
+            <form action="" id="add-task-form">
+                <input type="text" placeholder="Task Name">
+                <input type="text" placeholder="Description">
+                <fieldset>
+                    <legend>Task Priority:</legend>
+    
+                    <label for="low-priority">Low</label>
+                    <input id="low-priority" type="radio" name="priority">
+    
+                    <label for="mid-priority">Mid</label>
+                    <input id="mid-priority" type="radio" name="priority">
+    
+                    <label for="high-priority">High</label>
+                    <input id="high-priority" type="radio" name="priority">
+                </fieldset>
+            </form>
+            <div id="task-calender"></div>
+        </div>
     </div>
     <div id="container">
         <div id="interface">

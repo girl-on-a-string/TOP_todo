@@ -20,6 +20,45 @@ body {
     overflow: hidden;
 }
 
+/* modal */
+
+#modal {
+    background-color: var(--txt-defualt);
+    color: var(--txt-contrast);
+    width: 68.75rem;
+    padding: var(--pad-defualt);
+    border-radius: var(--pad-defualt);
+    position: absolute;
+}
+
+#modal #modal-content {
+    display: flex;
+}
+
+#modal #task-add-prompt {
+    font-size: 1.5625rem;
+    text-align: center;
+    margin-bottom: var(--pad-defualt);
+}
+
+#modal #modal-content #add-task-form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal #modal-content #add-task-form input {
+    margin-bottom: var(--pad-defualt);
+}
+
+#modal #modal-content #add-task-form input:nth-child(2) {
+    height: 9.375rem;
+}
+
+#modal #modal-content #task-calender {
+    width: 35%;
+}
+
 /* container */
 
 #container {
