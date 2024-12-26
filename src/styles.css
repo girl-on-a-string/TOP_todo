@@ -59,6 +59,11 @@ body {
     width: 35%;
 }
 
+#modal #modal-btns {
+    text-align: center;
+    margin-top: var(--pad-defualt);
+}
+
 /* container */
 
 #container {
