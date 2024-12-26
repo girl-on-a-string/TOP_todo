@@ -47,12 +47,13 @@ body {
     flex-direction: column;
 }
 
-#modal #modal-content #add-task-form input {
+#modal #modal-content #add-task-form input, textarea {
     margin-bottom: var(--pad-defualt);
 }
 
-#modal #modal-content #add-task-form input:nth-child(2) {
+#modal #modal-content #add-task-form textarea {
     height: 9.375rem;
+    resize: none;
 }
 
 #modal #modal-content #task-calender {
