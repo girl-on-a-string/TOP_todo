@@ -12,19 +12,25 @@
         <div id="task-add-prompt">Add A Task</div>
         <div id="modal-content">
             <form action="" id="add-task-form">
-                <input type="text" placeholder="Task Name" maxlength="100" required>
-                <textarea placeholder="Description" maxlength="500"></textarea>
+                <input id="task-name" type="text" placeholder="Task Name" maxlength="100" required>
+                <textarea id="task-desc" placeholder="Description" maxlength="500"></textarea>
                 <fieldset>
                     <legend>Task Priority:</legend>
     
-                    <label for="low-priority">Low</label>
-                    <input id="low-priority" type="radio" name="priority">
+                    <div>
+                        <input id="low-priority" type="radio" name="priority">
+                        <label for="low-priority">Low</label>
+                    </div>
     
-                    <label for="mid-priority">Mid</label>
-                    <input id="mid-priority" type="radio" name="priority">
+                    <div>
+                        <input id="mid-priority" type="radio" name="priority">
+                        <label for="mid-priority">Mid</label>
+                    </div>
     
-                    <label for="high-priority">High</label>
-                    <input id="high-priority" type="radio" name="priority">
+                    <div>
+                        <input id="high-priority" type="radio" name="priority">
+                        <label for="high-priority">High</label>
+                    </div>
                 </fieldset>
             </form>
             <div id="task-calender"></div>

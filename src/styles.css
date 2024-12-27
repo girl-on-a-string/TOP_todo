@@ -47,13 +47,38 @@ body {
     flex-direction: column;
 }
 
-#modal #modal-content #add-task-form input, textarea {
+#modal #modal-content #add-task-form #task-name, #task-desc, textarea {
     margin-bottom: var(--pad-defualt);
 }
 
 #modal #modal-content #add-task-form textarea {
     height: 9.375rem;
     resize: none;
+}
+
+#modal #modal-content #add-task-form fieldset {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    align-items: center;
+}
+
+#modal #modal-content #add-task-form fieldset legend {
+    float: inline-start;
+    font-size: 1.25rem;
+}
+
+#modal #modal-content #add-task-form fieldset div {
+    display: flex;
+    flex-direction: column;
+}
+
+#modal #modal-content #add-task-form fieldset div, fieldset legend {
+    margin-right: var(--pad-defualt);
+}
+
+#modal #modal-content #add-task-form fieldset div input {
+    margin-bottom: .625rem;
 }
 
 #modal #modal-content #task-calender {
@@ -63,6 +88,18 @@ body {
 #modal #modal-btns {
     text-align: center;
     margin-top: var(--pad-defualt);
+}
+
+#modal #modal-btns button {
+    color: var(--txt-contrast);
+    background-color: var(--txt-defualt);
+    border: .0625rem solid var(--txt-contrast);
+    padding: var(--pad-defualt);
+    border-radius: var(--pad-defualt);
+}
+
+#modal #modal-btns button:first-child {
+    margin-right: var(--pad-defualt);
 }
 
 /* container */
