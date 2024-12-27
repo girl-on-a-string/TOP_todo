@@ -1,5 +1,6 @@
 :root {
     --txt-defualt: black;
+    --modal-shadow: rgba(0, 0, 0, 0.5);
     --txt-contrast: #E0B97D;
     --pad-defualt: 1.25rem;
 }
@@ -22,13 +23,24 @@ body {
 
 /* modal */
 
+#modal-shadow {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--modal-shadow);
+    z-index: 1;
+}
+
 #modal {
     background-color: var(--txt-defualt);
     color: var(--txt-contrast);
     width: 68.75rem;
     padding: var(--pad-defualt);
     border-radius: var(--pad-defualt);
-    position: absolute;
+    z-index: 2;
 }
 
 #modal #modal-content {
@@ -49,6 +61,12 @@ body {
 
 #modal #modal-content #add-task-form #task-name, #task-desc, textarea {
     margin-bottom: var(--pad-defualt);
+}
+
+#modal #modal-content #add-task-form #task-name, #task-desc {
+    background-color: var(--txt-contrast);
+    border: .0625rem solid var(--txt-contrast);
+    color: var(--txt-defualt);
 }
 
 #modal #modal-content #add-task-form textarea {
@@ -117,6 +135,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 }
 
 /* interface */
