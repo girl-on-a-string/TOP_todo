@@ -96,6 +96,13 @@ body {
     border: .0625rem solid var(--txt-contrast);
     padding: var(--pad-defualt);
     border-radius: var(--pad-defualt);
+    transition: 0.2s;
+}
+
+#modal #modal-btns button:hover {
+    color: var(--txt-defualt);
+    border: .0625rem solid var(--txt-contrast);
+    background-color: var(--txt-contrast);
 }
 
 #modal #modal-btns button:first-child {
