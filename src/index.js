@@ -1,2 +1,11 @@
 import "./styles.css";
-import { modalControls } from "./modal";
+import { modalControls, getModalData } from "./modal";
+
+document.getElementById("add-task-btn").addEventListener("click", () => {
+    modalControls().openModal();
+});
+
+(() => {
+    console.log("hello world");
+    modalControls();
+})();
