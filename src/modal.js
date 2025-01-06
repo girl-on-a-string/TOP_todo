@@ -9,15 +9,14 @@ const modalControls = () => {
     const openModal = () => {
         modal.style.display = "initial";
         modalShadow.style.display = "flex";
+        modalShadow.addEventListener("click", () => {
+            closeModal()
+        });
     }
 
     const closeModal = () => {
-        window.onclick = (e) => {
-            if (e.target !== modal) {
-                modal.style.display = "none";
-                modalShadow.style.display = "none";
-            }
-        }
+        modal.style.display = "none";
+        modalShadow.style.display = "none";
     }
 
     return {
