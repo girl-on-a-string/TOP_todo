@@ -8,7 +8,7 @@ const modalControls = () => {
 
     const openModal = () => {
         modal.style.display = "initial";
-        modalShadow.style.display = "flex";
+        modalShadow.style.display = "initial";
         modalShadow.addEventListener("click", () => {
             closeModal()
         });

@@ -7,38 +7,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add" />
 </head>
 <body>
-    <div id="modal-shadow">
-        <div id="modal">
-            <div id="task-add-prompt">Add A Task</div>
-            <div id="modal-content">
-                <form action="" id="add-task-form">
-                    <input id="task-name" type="text" placeholder="Task Name" maxlength="100" required>
-                    <textarea id="task-desc" placeholder="Description" maxlength="500"></textarea>
-                    <fieldset>
-                        <legend>Task Priority:</legend>
-        
-                        <div>
-                            <input id="low-priority" type="radio" name="priority">
-                            <label for="low-priority">Low</label>
-                        </div>
-        
-                        <div>
-                            <input id="mid-priority" type="radio" name="priority">
-                            <label for="mid-priority">Mid</label>
-                        </div>
-        
-                        <div>
-                            <input id="high-priority" type="radio" name="priority">
-                            <label for="high-priority">High</label>
-                        </div>
-                    </fieldset>
-                </form>
-                <div id="task-calender"></div>
-            </div>
-            <div id="modal-btns">
-                <button>Cancel</button>
-                <button>Confirm</button>
-            </div>
+    <div id="modal-shadow"></div>
+    <div id="modal">
+        <div id="task-add-prompt">Add A Task</div>
+        <div id="modal-content">
+            <form action="" id="add-task-form">
+                <input id="task-name" type="text" placeholder="Task Name" maxlength="100" required>
+                <textarea id="task-desc" placeholder="Description" maxlength="500"></textarea>
+                <fieldset>
+                    <legend>Task Priority:</legend>
+                    <div>
+                        <input id="low-priority" type="radio" name="priority">
+                        <label for="low-priority">Low</label>
+                    </div>
+                    <div>
+                        <input id="mid-priority" type="radio" name="priority">
+                        <label for="mid-priority">Mid</label>
+                    </div>
+                    <div>
+                        <input id="high-priority" type="radio" name="priority">
+                        <label for="high-priority">High</label>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="task-calender"></div>
+        </div>
+        <div id="modal-btns">
+            <button>Cancel</button>
+            <button type="submit">Confirm</button>
         </div>
     </div>
     <div id="container">
@@ -46,7 +42,7 @@
             <header><h1>To Do:</h1></header>
             <main>
                 <div id="add-task">
-                    <button>
+                    <button id="add-task-btn">
                         <span class="material-symbols-outlined">
                             add
                         </span>
