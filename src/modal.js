@@ -10,7 +10,7 @@ const modalControls = () => {
         modal.style.display = "initial";
         modalShadow.style.display = "initial";
         modalShadow.addEventListener("click", () => {
-            closeModal()
+            closeModal();
         });
     }
 
@@ -27,7 +27,15 @@ const modalControls = () => {
 // retreive data from inputs
 
 const getModalData = () => {
+    let newTaskName = document.getElementById("task-name").value;
+    let newTaskDesc = document.getElementById("task-desc").value;
 
+    let radios = document.getElementsByName("priority");
+    let newTaskPriority = Array.from(radios).find(radios => radios);
+
+    return {
+        newTaskName, newTaskDesc, newTaskPriority
+    }
 }
 
-export {modalControls ,getModalData};
+export {modalControls, getModalData};
