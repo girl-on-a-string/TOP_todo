@@ -19,17 +19,25 @@ document.getElementById("cancel-action").addEventListener("click", () => {
 
 document.getElementById("submit-data").addEventListener("click", () => {
 
-    if (taskNameInput.value !== "") {
+    if (taskNameInput.value != "") {
         getModalData();
         modalControls().closeModal();
     } else {
         modalErrors.innerText = "Task must have a name and priority";
     }
 
-    console.log(getModalData());
+    for (const button of priorityRadios) {
+        if (button.checked) {
+            console.log(button.value);
+        }
+    }
+
+    // console.log(getModalData());
 });
 
 (() => {
     console.log("hello world");
     modalControls();
 })();
+
+export {taskNameInput, taskDescInput}
