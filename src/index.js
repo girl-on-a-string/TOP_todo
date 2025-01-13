@@ -19,20 +19,17 @@ document.getElementById("cancel-action").addEventListener("click", () => {
 
 document.getElementById("submit-data").addEventListener("click", () => {
 
-    if (taskNameInput.value != "") {
-        getModalData();
-        modalControls().closeModal();
-    } else {
-        modalErrors.innerText = "Task must have a name and priority";
-    }
-
     for (const button of priorityRadios) {
-        if (button.checked) {
-            console.log(button.value);
+        if (!button.checked && taskNameInput.value != "") { // if no button is checked
+            getModalData();
+
+            console.log(getModalData());
+
+            modalControls().closeModal();
+        } else {
+            modalErrors.innerText = "Task must have at least a name and priority";
         }
     }
-
-    // console.log(getModalData());
 });
 
 (() => {
