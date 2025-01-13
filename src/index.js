@@ -6,7 +6,14 @@ document.getElementById("add-task-btn").addEventListener("click", () => {
 });
 
 document.getElementById("submit-data").addEventListener("click", () => {
-    getModalData();
+    // getModalData();
+
+    let taskNameInput = document.getElementById("task-name").value;
+
+    if (taskNameInput !== "") {
+        getModalData();
+        modalControls().closeModal();
+    }
 
     console.log(getModalData());
 });
