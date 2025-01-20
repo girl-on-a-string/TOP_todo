@@ -40,9 +40,12 @@ const submitModal = () => {
         let modalErrorDisplay = document.getElementById("modal-error-display");
         modalErrorDisplay.innerText = "";
 
+        let radioValue = "";
+
         const checkRadios = () => {
             for (const radio of priorityRadios) {
                 if (radio.checked) { 
+                    radioValue = radio.value;
                     return true;
                 }
             }
@@ -64,10 +67,10 @@ const submitModal = () => {
         }
 
         if (checkRequired()) {
-
+            let task = newTask(nameInput.value, descInput.value, radioValue);
+            console.log(task);
         }
 
-        // if checkrewuired true then check desc as well
     }
 
     checkInputs();
