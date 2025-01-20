@@ -40,41 +40,38 @@ const submitModal = () => {
     const descInput = document.getElementById("task-desc");
     const priorityRadios = document.getElementsByName("priority");
 
-    const checkInputs = () => {
+    let radioValue = "";
 
-        let radioValue = "";
-
-        const checkRadios = () => {
-            for (const radio of priorityRadios) {
-                if (radio.checked) { 
-                    radioValue = radio.value;
-                    return true;
-                }
+    const checkRadios = () => {
+        for (const radio of priorityRadios) {
+            if (radio.checked) { 
+                radioValue = radio.value;
+                return true;
             }
         }
+    }
     
-        const checkName = () => {
-            if (nameInput.value !== "") {
-                return true;
-            }
+    const checkName = () => {
+        if (nameInput.value !== "") {
+            return true;
         }
-
-        const checkRequired = () => {
-            if (checkRadios() && checkName()) {
-                let task = newTask(nameInput.value, descInput.value, radioValue);
-                taskList.push(task);
-                closeModal();
-                return true;
-            } else {
-                modalErrorDisplay.innerText = "Task must have a name and priority";
-                return false;
-            }
-        }
-
-        checkRequired();
     }
 
-    checkInputs();
+    const checkRequired = () => {
+        if (checkRadios() && checkName()) {
+            let task = newTask(nameInput.value, descInput.value, radioValue);
+            taskList.push(task);
+            closeModal();
+            return true;
+        } else {
+            modalErrorDisplay.innerText = "Task must have a name and priority";
+            return false;
+        }
+    }
+
+    checkRequired();
+
+    return {checkRequired}
 }
 
 // export
