@@ -23,6 +23,7 @@ const openModal = () => {
 const closeModal = () => {
     modalShadow.style.display = "none";
     modal.style.display = "none";
+    form.reset();
 }
 
 // submit or cancel actions
@@ -56,8 +57,6 @@ const submitModal = () => {
 
         const checkRequired = () => {
             if (checkRadios() && checkName()) {
-                console.log(checkRadios());
-                console.log(checkName());
                 return true;
             } else {
                 modalErrorDisplay.innerText = "Task must have a name and priority";
@@ -65,6 +64,8 @@ const submitModal = () => {
         }
 
         checkRequired();
+
+        // if checkrewuired true then check desc as well
     }
 
     checkInputs();
