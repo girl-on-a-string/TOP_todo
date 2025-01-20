@@ -37,6 +37,9 @@ const submitModal = () => {
     const priorityRadios = document.getElementsByName("priority");
 
     const checkInputs = () => {
+        let modalErrorDisplay = document.getElementById("modal-error-display");
+        modalErrorDisplay.innerText = "";
+
         const checkRadios = () => {
             for (const radio of priorityRadios) {
                 if (radio.checked) { 
@@ -50,9 +53,21 @@ const submitModal = () => {
                 return true;
             }
         }
+
+        const checkRequired = () => {
+            if (checkRadios() && checkName()) {
+                console.log(checkRadios());
+                console.log(checkName());
+                return true;
+            } else {
+                modalErrorDisplay.innerText = "Task must have a name and priority";
+            }
+        }
+
+        checkRequired();
     }
 
-
+    checkInputs();
 }
 
 const cancelModal = () => {
