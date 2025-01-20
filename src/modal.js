@@ -59,6 +59,9 @@ const submitModal = () => {
 
         const checkRequired = () => {
             if (checkRadios() && checkName()) {
+                let task = newTask(nameInput.value, descInput.value, radioValue);
+                console.log(task);
+                closeModal();
                 return true;
             } else {
                 modalErrorDisplay.innerText = "Task must have a name and priority";
@@ -66,11 +69,7 @@ const submitModal = () => {
             }
         }
 
-        if (checkRequired()) {
-            let task = newTask(nameInput.value, descInput.value, radioValue);
-            console.log(task);
-        }
-
+        checkRequired();
     }
 
     checkInputs();
