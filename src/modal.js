@@ -1,6 +1,6 @@
 // import
 
-import { newTask } from "./task";
+import { newTask, taskList } from "./task";
 
 // open + close modal
 
@@ -62,7 +62,7 @@ const submitModal = () => {
         const checkRequired = () => {
             if (checkRadios() && checkName()) {
                 let task = newTask(nameInput.value, descInput.value, radioValue);
-                console.log(task);
+                taskList.push(task);
                 closeModal();
                 return true;
             } else {
