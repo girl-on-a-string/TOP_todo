@@ -6,6 +6,9 @@ import { newTask } from "./task";
 
 const form = document.getElementById("add-task-form");
 
+let modalErrorDisplay = document.getElementById("modal-error-display");
+modalErrorDisplay.innerText = "";
+
 const modal = document.getElementById("modal");
 const modalShadow = document.getElementById("modal-shadow");
 
@@ -23,6 +26,7 @@ const openModal = () => {
 const closeModal = () => {
     modalShadow.style.display = "none";
     modal.style.display = "none";
+    modalErrorDisplay.innerText = "";
     form.reset();
 }
 
@@ -37,8 +41,6 @@ const submitModal = () => {
     const priorityRadios = document.getElementsByName("priority");
 
     const checkInputs = () => {
-        let modalErrorDisplay = document.getElementById("modal-error-display");
-        modalErrorDisplay.innerText = "";
 
         let radioValue = "";
 
