@@ -30,7 +30,6 @@ const closeModal = () => {
 
 const submitModal = () => {
     // submit, close, and clear all data
-    // throw error if no name and priority
     // create new task object with data
 
     const nameInput = document.getElementById("task-name");
@@ -60,10 +59,13 @@ const submitModal = () => {
                 return true;
             } else {
                 modalErrorDisplay.innerText = "Task must have a name and priority";
+                return false;
             }
         }
 
-        checkRequired();
+        if (checkRequired()) {
+
+        }
 
         // if checkrewuired true then check desc as well
     }
@@ -71,13 +73,6 @@ const submitModal = () => {
     checkInputs();
 }
 
-const cancelModal = () => {
-    // close and clear all data
-    
-    form.reset();
-    closeModal();
-}
-
 // export
 
-export {openModal, submitModal, cancelModal}
+export {openModal, submitModal, closeModal}

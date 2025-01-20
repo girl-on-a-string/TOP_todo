@@ -1,5 +1,5 @@
 import "./styles.css";
-import { openModal, submitModal, cancelModal } from "./modal";
+import { openModal, submitModal, closeModal } from "./modal";
 
 // handle btns
 
@@ -12,5 +12,5 @@ document.getElementById("submit-data").addEventListener("click", () => {
 });
 
 document.getElementById("cancel-action").addEventListener("click", () => {
-    cancelModal();
+    closeModal();
 });
