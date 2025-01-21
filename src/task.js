@@ -31,21 +31,21 @@ const createDOMTask = () => {
         let taskTitleDiv = document.createElement("div");
         taskTitleDiv.innerText = "";
         taskTitleDiv.classList.add("task-title");
-        taskDisplay.appendChild(taskTitleDiv);
+        taskDiv.appendChild(taskTitleDiv);
     
         // add desc 
     
         let taskDescDiv = document.createElement("div");
         taskDescDiv.innerText = "";
         taskDescDiv.classList.add("task-desc");
-        taskDisplay.appendChild(taskDescDiv);
+        taskDiv.appendChild(taskDescDiv);
     
         // add priority
     
         let taskPriorityDiv = document.createElement("div");
         taskPriorityDiv.innerText = "";
         taskPriorityDiv.classList.add("task-priority");
-        taskDisplay.appendChild(taskPriorityDiv);
+        taskDiv.appendChild(taskPriorityDiv);
     
         // add edit btn
     
@@ -55,7 +55,7 @@ const createDOMTask = () => {
         taskEditBtn.addEventListener("click", () => {
     
         });
-        taskDisplay.appendChild(taskEditBtn);
+        taskDiv.appendChild(taskEditBtn);
     
         // add delete btn
     
@@ -65,7 +65,7 @@ const createDOMTask = () => {
         taskDeleteBtn.addEventListener("click", () => {
     
         });
-        taskDisplay.appendChild(taskDeleteBtn);
+        taskDiv.appendChild(taskDeleteBtn);
     
         // add complete btn
     
@@ -75,7 +75,7 @@ const createDOMTask = () => {
         taskCompleteBtn.addEventListener("click", () => {
     
         });
-        taskDisplay.appendChild(taskCompleteBtn);
+        taskDiv.appendChild(taskCompleteBtn);
     });
 }
 
