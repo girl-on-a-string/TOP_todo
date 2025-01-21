@@ -1,6 +1,6 @@
 // import
 
-import { newTask, taskList } from "./task";
+import { newTask, taskList, createDOMTask } from "./task";
 
 // open + close modal
 
@@ -33,9 +33,6 @@ const closeModal = () => {
 // submit or cancel actions
 
 const submitModal = () => {
-    // submit, close, and clear all data
-    // create new task object with data
-
     const nameInput = document.getElementById("task-name");
     const descInput = document.getElementById("task-desc");
     const priorityRadios = document.getElementsByName("priority");
@@ -61,6 +58,7 @@ const submitModal = () => {
         if (checkRadios() && checkName()) {
             let task = newTask(nameInput.value, descInput.value, radioValue);
             taskList.push(task);
+            createDOMTask();
             closeModal();
             return true;
         } else {
@@ -69,9 +67,7 @@ const submitModal = () => {
         }
     }
 
-    checkRequired();
-
-    return {checkRequired}
+    return checkRequired();
 }
 
 // export
