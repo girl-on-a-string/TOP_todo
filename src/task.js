@@ -1,7 +1,3 @@
-// import
-
-import { submitModal} from "./modal";
-
 // create tasks
 
 const newTask = (taskName, taskDesc, taskPriority) => { // task object
