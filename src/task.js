@@ -16,7 +16,7 @@ let taskList = [];
 
 // create task display
 
-const createDOMTask = () => {
+const createDOMTask = (task) => {
     let taskDisplay = document.getElementById("list");
     
     // create main container
@@ -28,21 +28,21 @@ const createDOMTask = () => {
     // add title
     
     let taskTitleDiv = document.createElement("div");
-    taskTitleDiv.innerText = newTask().taskName;
+    taskTitleDiv.innerText = task.taskName;
     taskTitleDiv.classList.add("task-title");
     taskDiv.appendChild(taskTitleDiv);
     
     // add desc 
     
     let taskDescDiv = document.createElement("div");
-    taskDescDiv.innerText = newTask().taskDesc;
+    taskDescDiv.innerText = task.taskDesc;
     taskDescDiv.classList.add("task-desc");
     taskDiv.appendChild(taskDescDiv);
     
     // add priority
     
     let taskPriorityDiv = document.createElement("div");
-    taskPriorityDiv.innerText = newTask().taskPriority;
+    taskPriorityDiv.innerText = task.taskPriority;
     taskPriorityDiv.classList.add("task-priority");
     taskDiv.appendChild(taskPriorityDiv);
     

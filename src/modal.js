@@ -58,7 +58,7 @@ const submitModal = () => {
         if (checkRadios() && checkName()) {
             let task = newTask(nameInput.value, descInput.value, radioValue);
             taskList.push(task);
-            createDOMTask();
+            createDOMTask(task);
             closeModal();
             return true;
         } else {
