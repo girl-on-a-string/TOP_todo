@@ -154,6 +154,37 @@ body {
     text-align: center;
 }
 
+/* tasks */
+
+.task-container {
+    border: 1px solid var(--txt-defualt);
+    display: flex;
+    width: 34.375rem;
+}
+
+.task-status {
+    width: 15%;
+}
+
+.main-task-content {
+    width: 100%;
+    display: flex;
+}
+
+.main-task-content .task-number {
+    width: 15%;
+}
+
+.main-task-content .task-info .main-info {
+    display: flex;
+}
+
+.task-settings {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
 /* header */
 
 header h1 {
