@@ -151,6 +151,11 @@ body {
 
 #interface {
     padding: 1.5625rem;
+}
+
+/* header */
+
+header {
     text-align: center;
 }
 
@@ -195,6 +200,10 @@ body {
     font-size: 1.25rem;
 }
 
+.main-task-content .task-due-date {
+    text-align: left;
+}
+
 .task-settings {
     display: flex;
     flex-direction: column;
@@ -202,7 +211,6 @@ body {
     background-color: var(--txt-defualt);
     color: var(--txt-contrast);
     padding: .625rem;
-    text-align: left;
 }
 
 /* header */
