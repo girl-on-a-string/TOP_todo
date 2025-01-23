@@ -157,32 +157,52 @@ body {
 /* tasks */
 
 .task-container {
-    border: 1px solid var(--txt-defualt);
     display: flex;
     width: 34.375rem;
+    margin: .625rem;
+    height: 7.8125rem;
 }
 
 .task-status {
     width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-task-content {
     width: 100%;
     display: flex;
+    background-color: var(--txt-defualt);
+    color: var(--txt-contrast);
+    padding: .625rem;
 }
 
 .main-task-content .task-number {
     width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.125rem;
 }
 
 .main-task-content .task-info .main-info {
-    display: flex;
+    height: 70%;
+    text-align: left;
+}
+
+.main-task-content .task-info .main-info .task-title {
+    font-size: 1.25rem;
 }
 
 .task-settings {
     display: flex;
     flex-direction: column;
     width: 15%;
+    background-color: var(--txt-defualt);
+    color: var(--txt-contrast);
+    padding: .625rem;
+    text-align: left;
 }
 
 /* header */
@@ -192,6 +212,12 @@ header h1 {
 }
 
 /* main */
+
+main #add-task {
+    margin: var(--pad-defualt);
+    display: flex;
+    justify-content: center;
+}
 
 main #add-task button {
     background-color: var(--txt-defualt);
