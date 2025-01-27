@@ -10,6 +10,14 @@ const newTask = (taskName, taskDesc, taskPriority) => { // task object
 
 let taskList = [];
 
+// increase task number with each added
+
+let num = 0;
+
+taskList.forEach(() => {
+    num++;
+});
+
 // create task display
 
 const createDOMTask = (task) => {
@@ -28,7 +36,7 @@ const createDOMTask = (task) => {
     taskDiv.appendChild(statusDiv);
 
     let taskCompleteBtn = document.createElement("button");
-    taskCompleteBtn.innerText = "complete";
+    taskCompleteBtn.innerText = "c";
     taskCompleteBtn.classList.add("task-complete-btn");
     taskCompleteBtn.addEventListener("click", () => {
     
@@ -45,7 +53,7 @@ const createDOMTask = (task) => {
 
     let taskNumDiv = document.createElement("div");
     taskNumDiv.classList.add("task-number");
-    taskNumDiv.innerText = "num";
+    taskNumDiv.innerText = num;
     mainContentDiv.appendChild(taskNumDiv);
 
     // create task info div
@@ -60,6 +68,24 @@ const createDOMTask = (task) => {
         taskPriorityDiv.innerText = task.taskPriority;
         taskPriorityDiv.classList.add("task-priority");
         taskInfoDiv.appendChild(taskPriorityDiv);
+
+        switch (task.taskPriority) {
+            case "low-priority": // color green
+                taskPriorityDiv.style.color = window.getComputedStyle(document.body).getPropertyValue("--txt-low");
+                break;
+            case "mid-priority": // color gold
+                taskPriorityDiv.style.color = window.getComputedStyle(document.body).getPropertyValue("--txt-mid");
+                break;
+            case "high-priority": // color red
+                taskPriorityDiv.style.color = window.getComputedStyle(document.body).getPropertyValue("--txt-high");
+                break;
+            case "no-priority": // color white
+                taskPriorityDiv.style.color = window.getComputedStyle(document.body).getPropertyValue("--txt-no");
+                break;
+            default: // no color/default
+                taskPriorityDiv.style.color = window.getComputedStyle(document.body).getPropertyValue("--txt-contrast");
+                break;
+        }
 
         // create main info div
 
@@ -97,7 +123,7 @@ const createDOMTask = (task) => {
         // create edit btn
         
         let taskEditBtn = document.createElement("button");
-        taskEditBtn.innerText = "edit";
+        taskEditBtn.innerText = "e";
         taskEditBtn.classList.add("task-edit-btn");
         taskEditBtn.addEventListener("click", () => {
         
@@ -107,7 +133,7 @@ const createDOMTask = (task) => {
         // create delete btn
         
         let taskDeleteBtn = document.createElement("button");
-        taskDeleteBtn.innerText = "delete";
+        taskDeleteBtn.innerText = "d";
         taskDeleteBtn.classList.add("task-delete-btn");
         taskDeleteBtn.addEventListener("click", () => {
         

@@ -3,6 +3,11 @@
     --modal-shadow: rgba(0, 0, 0, 0.5);
     --txt-contrast: #E0B97D;
     --pad-defualt: 1.25rem;
+
+    --txt-low: green;
+    --txt-mid: yellow;
+    --txt-high: red;
+    --txt-no: white;
 }
 
 * {
@@ -197,7 +202,7 @@ header {
 }
 
 .main-task-content .task-info .main-info .task-title {
-    font-size: 1.25rem;
+    font-size: 1.5625rem;
 }
 
 .main-task-content .task-due-date {
